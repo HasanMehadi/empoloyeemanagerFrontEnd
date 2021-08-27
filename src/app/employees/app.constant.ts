@@ -1,0 +1,10 @@
+const _VERSION = '0.0.1-SNAPSHOT';
+const _DEBUG_INFO_ENABLED = false;
+const _SERVER_API_URL = '';
+export const VERSION = _VERSION;
+export const DEBUG_INFO_ENABLED = _DEBUG_INFO_ENABLED;
+export const SERVER_API_URL = window.location.protocol + '//' + window.location.hostname + ':8080/';
+export const LOGGED_IN_USER = 'current-user';
+export const AUTH_TOKEN = 'auth-token';
+export const PROPERTY_TOKEN = 'property-token';
+export const PROPERTY_INVESTMENT = 'Property Investment';
