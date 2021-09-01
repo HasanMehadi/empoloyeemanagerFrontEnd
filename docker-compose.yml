@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  angular-service:
+    container_name: employeemanagerfront
+    build: ./
+    volumes:
+    - './:/usr/src/app'
+    ports:
+    - "4200:4200"
+    command: >
+      bash -c "npm start"
+  docker-ngnix:
+    container_name: docker-ngnix
+    build: ./
+    ports:
+    - "80:80"
+    command: ["nginx","-g","daemon off"]
+    links:
+      - angular-service
+
