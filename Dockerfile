@@ -13,4 +13,10 @@ CMD ["npm", "start"]
 
 FROM nginx:alpine
 COPY src/nginx/etc/conf.d/default.conf /etc/ngnix/conf/default.conf
-COPY --from=builder app/dist/employeemanager usr/share/nginx/html
+COPY --from=builder /app/dist/empoloyeemanager usr/share/nginx/html
+CMD ["nginx","-g","deamon off"]
+
+# Expose port 80
+EXPOSE 80
+
+
