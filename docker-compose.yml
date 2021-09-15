@@ -11,7 +11,7 @@ services:
     command: >
       bash -c "npm start"
   docker-ngnix:
-    container_name: ngnix
+    container_name: docker-ngnix
     build: ./
     ports:
     - "80:80"
